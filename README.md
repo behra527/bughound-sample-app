@@ -1,4 +1,4 @@
-﻿# Support Desk Sample
+# Support Desk Sample
 
 Small Python service used to try BugHound with a real customer ticket.
 

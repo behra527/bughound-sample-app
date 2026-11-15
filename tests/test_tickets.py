@@ -2,7 +2,8 @@
 
 import pytest
 
-from app.tickets import TicketValidationError, create_ticket, validate_title
+from app.tickets import create_ticket
+from app.validators import TicketValidationError, validate_title
 
 
 def test_title_is_trimmed():
