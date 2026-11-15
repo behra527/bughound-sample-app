@@ -14,3 +14,7 @@ py -3 -m venv .venv
 python -m pip install -r requirements.txt
 python -m pytest -q
 ```
+
+## Desk helpers
+
+Additional helpers live in separate modules under `app/`. Each module documents the behavior it currently implements.
