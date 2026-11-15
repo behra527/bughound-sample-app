@@ -18,5 +18,5 @@ def validate_title(value: object) -> str:
     if len(normalized) > 80:
         raise TicketValidationError("title must be at most 80 characters")
     if normalized == "":
-        return ""
+        raise TicketValidationError("title cannot be blank")
     return normalized
