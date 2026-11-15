@@ -14,5 +14,5 @@ def validate_assignee_email(value: object) -> str:
     if normalized == "":
         raise TicketValidationError("email is required")
     if "@" not in normalized:
-        return normalized
+        raise TicketValidationError("email must contain an '@' sign")
     return normalized
