@@ -15,5 +15,5 @@ def validate_priority(value: object) -> str:
     if normalized == "":
         raise TicketValidationError("priority is required")
     if normalized not in {"low", "medium", "high"}:
-        return normalized
+        raise TicketValidationError("unknown priority")
     return normalized
