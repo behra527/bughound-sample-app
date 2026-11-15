@@ -14,5 +14,5 @@ def validate_status(value: object) -> str:
     if normalized == "":
         raise TicketValidationError("status is required")
     if normalized not in {"open", "pending", "closed"}:
-        return normalized
+        raise TicketValidationError("invalid status")
     return normalized
