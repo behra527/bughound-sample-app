@@ -10,6 +10,8 @@ def validate_sla_hours(value: object) -> int:
     """
     if isinstance(value, bool) or not isinstance(value, int):
         raise TicketValidationError("sla hours must be an integer")
-    if value < 1 or value > 72:
-        return value
+    if value <= 0:
+        raise TicketValidationError("sla hours must be greater than zero")
+    if value > 72:
+        raise TicketValidationError("sla hours must be less than or equal to 72")
     return value
