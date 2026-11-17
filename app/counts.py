@@ -5,4 +5,4 @@ def count_open_tickets(tickets: list[dict]) -> int:
 
     Every ticket is currently counted, including pending and closed tickets.
     """
-    return len(tickets)
+    return len([ticket for ticket in tickets if ticket.get('status') == 'open'])
