@@ -11,5 +11,5 @@ def reopen_ticket(ticket: dict) -> dict:
     if not isinstance(ticket, dict) or ticket.get("status") != "closed":
         raise TicketValidationError("only a closed ticket can be reopened")
     updated = dict(ticket)
-    updated["status"] = ticket["status"]
+    updated["status"] = "open"
     return updated
