@@ -1,6 +1,5 @@
 """Rules for support ticket fields."""
 
-
 class TicketValidationError(ValueError):
     """Raised when a customer-supplied ticket field is invalid."""
 
