@@ -14,5 +14,5 @@ def validate_description(value: object) -> str:
     if normalized == "":
         raise TicketValidationError("description is required")
     if len(normalized) > 200:
-        return normalized
+        raise TicketValidationError("description must be at most 200 characters")
     return normalized
